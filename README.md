@@ -2,14 +2,14 @@
 
 ## Pre requirements
 - Java version 21, JDK (environment variables configured).
-- Eclipse IDE or IntelliJ IDEA.
+- IntelliJ IDEA.
 - Gradle version 8.5 or higher (environment variables configured).
 - Cucumber for Java Plugin (updated version).
 - Gherkin Plugin (updated version).
 
 ## Installation
 - To clone this repository locally
-- Import the project from Eclipse or IntelliJ IDE under the structure of an existing Gradle project.
+- Import the project to IntelliJ IDE under the structure of an existing Gradle project.
 - Configure JRE System Library with JavaSE-21.
 
 
@@ -19,14 +19,27 @@
 ```
 gradle clean test --tests "com.test.runners.VirtualPianoRunner" -Denvironment=chrome --info
 ```
+- Run in Google Chrome headless
+```
+gradle clean test --tests "com.test.runners.VirtualPianoRunner" -Denvironment=chrome-headless --info
+```
 
 - Run in Firefox
 ```
 gradle clean test --tests "com.test.runners.VirtualPianoRunner" -Denvironment=firefox --info
 ```
+- Run in Firefox headless
+```
+gradle clean test --tests "com.test.runners.VirtualPianoRunner" -Denvironment=firefox-headless --info
+```
 
 - Run in Microsoft Edge
 ```
 gradle clean test --tests "com.test.runners.VirtualPianoRunner" -Denvironment=edge --info
+```
+
+- Run in Microsoft Edge headless
+```
+gradle clean test --tests "com.test.runners.VirtualPianoRunner" -Denvironment=edge-headless --info
 ```
 
